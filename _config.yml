@@ -1,3 +1,11 @@
 title: nvbangg
-description: Personal site
+description: Personal site - Software Developer & Student
 theme: jekyll-theme-cayman
+markdown: kramdown
+highlighter: rouge
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge

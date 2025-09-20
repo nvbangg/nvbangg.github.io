@@ -1,3 +1,8 @@
+---
+layout: default
+title: nvbangg
+---
+
 # 👋 Hi there, I'm nvbangg
 
 <div align="center">
@@ -25,29 +30,26 @@
 <table>
   <tr>
     <td>
-      <img src="https://github-readme-stats.vercel.app/api/pin/?username=nvbangg&repo=CodePTIT&theme=dracula&hide_border=true&border_radius=20" width="300" height="150"/>
+      <img src="https://github-readme-stats.vercel.app/api/pin/?username=nvbangg&repo=CodePTIT&theme=dracula&hide_border=true&border_radius=20" width="300" height="150" alt="CodePTIT"/>
     </td>
     <td>
-      <img src="https://github-readme-stats.vercel.app/api/pin/?username=nvbangg&repo=nvbangg-tools&theme=dracula&hide_border=true&border_radius=20"width="300" height="150"/>
+      <img src="https://github-readme-stats.vercel.app/api/pin/?username=nvbangg&repo=nvbangg-tools&theme=dracula&hide_border=true&border_radius=20" width="300" height="150" alt="nvbangg-tools"/>
     </td>
     <td>
-      <img src="https://github-readme-stats.vercel.app/api/pin/?username=nvbangg&repo=KeyClipboard&theme=dracula&hide_border=true&border_radius=20"width="300" height="150"/>
+      <img src="https://github-readme-stats.vercel.app/api/pin/?username=nvbangg&repo=KeyClipboard&theme=dracula&hide_border=true&border_radius=20" width="300" height="150" alt="KeyClipboard"/>
     </td>
   </tr>
   <tr>
     <td>
-      <img src="https://github-readme-stats.vercel.app/api/pin/?username=nvbangg&repo=CodePTIT_Copier&theme=dracula&hide_border=true&border_radius=20"width="300" height="150"/>
+      <img src="https://github-readme-stats.vercel.app/api/pin/?username=nvbangg&repo=CodePTIT_Copier&theme=dracula&hide_border=true&border_radius=20" width="300" height="150" alt="CodePTIT_Copier"/>
     </td>
     <td>
-      <img src="https://github-readme-stats.vercel.app/api/pin/?username=nvbangg&repo=PTIT_Docs&theme=dracula&hide_border=true&border_radius=20" width="300" height="150"/>
+      <img src="https://github-readme-stats.vercel.app/api/pin/?username=nvbangg&repo=PTIT_Docs&theme=dracula&hide_border=true&border_radius=20" width="300" height="150" alt="PTIT_Docs"/>
     </td>
     <td>
-      <img src="https://github-readme-stats.vercel.app/api/pin/?username=nvbangg&repo=EDAns&theme=dracula&hide_border=true&border_radius=20" width="300" height="150"/>
+      <img src="https://github-readme-stats.vercel.app/api/pin/?username=nvbangg&repo=EDAns&theme=dracula&hide_border=true&border_radius=20" width="300" height="150" alt="EDAns"/>
     </td>
   </tr>
 </table>
 
 
-
-### Visitors
-[![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2Fnvbangg&countColor=%232ccce4)](https://visitorbadge.io/status?path=https%3A%2F%2Fgithub.com%2Fnvbangg)
