@@ -1,0 +1,446 @@
+:root {
+  --jet: hsl(0, 0%, 22%);
+  --dark: hsl(240, 2%, 12%);
+  --black: hsl(0, 0%, 7%);
+  --white: hsl(0, 0%, 98%);
+  --yellow: hsl(45, 100%, 72%);
+  --gray: hsl(0, 0%, 84%);
+  --gray-70: hsla(0, 0%, 84%, 0.7);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+button {
+  font: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+::selection {
+  background: var(--yellow);
+  color: var(--black);
+}
+html {
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background: var(--black);
+  color: var(--gray);
+}
+
+main {
+  margin: 15px auto 75px;
+  max-width: 1200px;
+  width: 90vw;
+}
+
+.page {
+  background: var(--dark);
+  border: 1px solid var(--jet);
+  border-radius: 20px;
+  padding: 15px;
+  box-shadow: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
+  display: none;
+  min-height: 400px;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.6;
+  width: 100%;
+}
+
+.page.active {
+  display: block;
+}
+.page p {
+  margin-bottom: 15px;
+}
+
+.page h1 {
+  color: var(--white);
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.page img {
+  max-width: 100%;
+  height: auto;
+  margin: 10px 5px;
+}
+
+.page a {
+  display: inline-block;
+}
+
+.page h3 {
+  color: var(--white);
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.donate-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.donate-section {
+  background: var(--jet);
+  border-radius: 16px;
+  padding: 25px;
+  margin-bottom: 25px;
+}
+
+.donate-badges {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.kofi-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.donate-or {
+  color: var(--gray);
+  font-size: 16px;
+  font-weight: 500;
+  padding: 0 10px;
+}
+
+.kofi-btn, .sponsor-btn, .paypal-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.3s;
+  text-decoration: none;
+  line-height: 1; 
+}
+
+.kofi-btn svg, .sponsor-btn svg, .paypal-btn svg {
+  flex-shrink: 0;
+  margin: 0;
+  width: 18px;
+  height: 18px;
+  align-self: center; 
+  position: relative;
+  top: 3px;
+  left: -3px;
+}
+
+.kofi-btn {
+  background: #29abe0;
+  color: var(--white);
+  box-shadow: 0 4px 15px rgba(41, 171, 224, 0.3);
+}
+
+.kofi-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(41, 171, 224, 0.4);
+  background: #1a9bd7;
+}
+
+.sponsor-btn {
+  background: linear-gradient(135deg, #ea4aaa 0%, #ff6b6b 100%);
+  color: var(--white);
+  box-shadow: 0 4px 15px rgba(234, 74, 170, 0.3);
+}
+
+.sponsor-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(234, 74, 170, 0.4);
+}
+
+.paypal-btn {
+  background: linear-gradient(135deg, #00457C 0%, #0070BA 100%);
+  color: var(--white);
+  box-shadow: 0 4px 15px rgba(0, 112, 186, 0.3);
+}
+
+.paypal-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 112, 186, 0.4);
+}
+
+.paypal-row {
+  margin-top: 15px;
+  justify-content: center;
+}
+
+.bank-info {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+}
+
+.bank-details {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.bank-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  background: hsla(0, 0%, 0%, 0.2);
+  border-radius: 12px;
+  border: 1px solid hsla(0, 0%, 100%, 0.05);
+}
+
+.bank-item ion-icon {
+  font-size: 28px;
+  color: var(--yellow);
+  flex-shrink: 0;
+}
+
+.bank-item > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.bank-item .label {
+  font-size: 12px;
+  color: var(--gray-70);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.bank-item .value {
+  font-size: 16px;
+  color: var(--white);
+  font-weight: 500;
+}
+
+.bank-qr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bank-qr img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.page h2 {
+  color: var(--white);
+  font-size: 24px;
+  text-transform: capitalize;
+  position: relative;
+  padding-bottom: 7px;
+  margin-bottom: 30px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.page h2 ion-icon {
+  font-size: 28px;
+}
+
+.page h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to right, hsl(45, 100%, 72%), hsl(35, 100%, 68%));
+  border-radius: 3px;
+}
+
+.navbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: hsla(240, 1%, 17%, 0.75);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--jet);
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 16px 30px hsla(0, 0%, 0%, 0.25);
+  z-index: 5;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.navbar button {
+  color: var(--gray);
+  font-size: 11px;
+  padding: 20px 7px;
+  transition: 0.25s;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.navbar button::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 3px;
+  background: linear-gradient(to right, hsl(45, 100%, 72%), hsl(35, 100%, 68%));
+  border-radius: 3px;
+  transition: 0.25s;
+}
+
+.navbar button:hover {
+  color: var(--gray-70);
+}
+
+.navbar button.active {
+  color: var(--yellow);
+}
+
+.navbar button.active::after {
+  width: calc(100% - 14px);
+}
+
+.navbar button ion-icon {
+  font-size: 16px;
+}
+
+@media (min-width: 580px) {
+  main {
+    margin: 60px auto 100px;
+  }
+  .page {
+    padding: 30px;
+    font-size: 15px;
+  }
+  .page h2 {
+    font-size: 32px;
+    font-weight: 600;
+    padding-bottom: 15px;
+  }
+  .page h2 ion-icon {
+    font-size: 36px;
+  }
+  .page h2::after {
+    height: 5px;
+  }
+  .page h1 {
+    font-size: 36px;
+  }
+  .page h3 {
+    font-size: 20px;
+  }
+  .bank-info {
+    grid-template-columns: 1fr 1fr;
+  }
+  .bank-qr img {
+    max-width: 250px;
+  }
+  .navbar {
+    border-radius: 20px 20px 0 0;
+  }
+  .navbar ul {
+    gap: 20px;
+  }
+  .navbar button {
+    font-size: 14px;
+  }
+  .navbar button ion-icon {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 768px) {
+  .page h2 {
+    padding-bottom: 20px;
+  }
+  .navbar button {
+    font-size: 15px;
+  }
+  .navbar button ion-icon {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  main {
+    margin-bottom: 60px;
+    margin-inline: auto;
+    position: relative;
+  }
+  .page {
+    box-shadow: 0 24px 80px hsla(0, 0%, 0%, 0.25);
+  }
+  .navbar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: auto;
+    left: auto;
+    width: max-content;
+    border-radius: 0 20px;
+    padding: 0 20px;
+    box-shadow: none;
+  }
+  .navbar ul {
+    gap: 30px;
+    padding: 0 20px;
+  }
+  .navbar button {
+    font-weight: 500;
+  }
+  .navbar button ion-icon {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1250px) {
+  body::-webkit-scrollbar {
+    width: 20px;
+  }
+  body::-webkit-scrollbar-track {
+    background: var(--black);
+  }
+  body::-webkit-scrollbar-thumb {
+    border: 5px solid var(--black);
+    background: hsla(0, 0%, 100%, 0.1);
+    border-radius: 20px;
+    box-shadow: inset 1px 1px 0 hsla(0, 0%, 100%, 0.11),
+      inset -1px -1px 0 hsla(0, 0%, 100%, 0.11);
+  }
+  body::-webkit-scrollbar-thumb:hover {
+    background: hsla(0, 0%, 100%, 0.15);
+  }
+  body::-webkit-scrollbar-button {
+    height: 60px;
+  }
+  main {
+    max-width: 1200px;
+  }
+}
