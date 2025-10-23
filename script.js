@@ -23,8 +23,6 @@ const switchPage = (page) => {
   scrollTo(0, 0);
 };
 
-navBtns.forEach(
-  (btn) => (btn.onclick = () => switchPage(btn.dataset.nav))
-);
+navBtns.forEach((btn) => (btn.onclick = () => switchPage(btn.dataset.nav)));
 onhashchange = () => switchPage(location.hash.slice(1) || "about");
 switchPage(location.hash.slice(1) || "about");

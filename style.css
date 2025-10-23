@@ -119,7 +119,9 @@ main {
   padding: 0 10px;
 }
 
-.kofi-btn, .sponsor-btn, .paypal-btn {
+.kofi-btn,
+.sponsor-btn,
+.paypal-btn {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -129,22 +131,24 @@ main {
   font-weight: 500;
   transition: 0.3s;
   text-decoration: none;
-  line-height: 1; 
+  line-height: 1;
 }
 
-.kofi-btn svg, .sponsor-btn svg, .paypal-btn svg {
+.kofi-btn svg,
+.sponsor-btn svg,
+.paypal-btn svg {
   flex-shrink: 0;
   margin: 0;
   width: 18px;
   height: 18px;
-  align-self: center; 
+  align-self: center;
   position: relative;
   top: 3px;
-  left: -3px;
+  left: -8px;
 }
 
 .kofi-btn {
-  background: #29abe0;
+  background: linear-gradient(135deg, #13c3ff 0%, #29abe0 100%);
   color: var(--white);
   box-shadow: 0 4px 15px rgba(41, 171, 224, 0.3);
 }
@@ -152,7 +156,7 @@ main {
 .kofi-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(41, 171, 224, 0.4);
-  background: #1a9bd7;
+  background: linear-gradient(135deg, #0fb8f7 0%, #1a9bd7 100%);
 }
 
 .sponsor-btn {
@@ -167,14 +171,15 @@ main {
 }
 
 .paypal-btn {
-  background: linear-gradient(135deg, #00457C 0%, #0070BA 100%);
-  color: var(--white);
-  box-shadow: 0 4px 15px rgba(0, 112, 186, 0.3);
+  background: linear-gradient(135deg, #ffc439 0%, #ffb834 100%);
+  color: #003087;
+  box-shadow: 0 4px 15px rgba(255, 196, 57, 0.3);
 }
 
 .paypal-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 112, 186, 0.4);
+  box-shadow: 0 6px 20px rgba(255, 196, 57, 0.4);
+  background: linear-gradient(135deg, #ffb834 0%, #ffa31a 100%);
 }
 
 .paypal-row {
