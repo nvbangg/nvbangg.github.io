@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>nvbangg Profile</title>
+
+    <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D7CEW92GQS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-D7CEW92GQS');
+  </script>
+
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <main>
+    <nav class="navbar">
+      <button class="active" data-nav="about">
+        <ion-icon name="person-outline"></ion-icon>About
+      </button>
+      <button data-nav="donate">
+        <ion-icon name="heart-outline"></ion-icon>Donate
+      </button>
+      <button data-nav="github">
+        <ion-icon name="logo-github"></ion-icon>GitHub
+      </button>
+      <button data-nav="facebook">
+        <ion-icon name="logo-facebook"></ion-icon>Facebook
+      </button>
+    </nav>
+    <article class="page active" data-page="about">
+      <h1><ion-icon name="person-outline"></ion-icon>About Me</h1>
+      <br />
+      <h2 id="hi">👋 Hi there, I'm nvbangg</h2>
+      <div style="text-align: center">
+        <a href="https://github.com/nvbangg" target="_blank">
+          <img src="https://img.shields.io/badge/Homepage-github.com%2Fnvbangg-blue?style=for-the-badge&logo=github"
+            alt="Homepage" style="border-radius: 10px;" height="30" />
+        </a>
+        <br />
+        <div class="contact-box">
+          <ion-icon name="mail-outline"></ion-icon>
+          Contact me at
+          <a href="mailto:nvbangg@gmail.com">nvbangg@gmail.com</a>
+        </div>
+      </div>
+    </article>
+    <article class="page" data-page="donate">
+      <h1><ion-icon name="heart-outline"></ion-icon>Support Me</h1>
+      <div class="donate-section">
+        <h2>
+          <ion-icon name="cafe"></ion-icon>Buy Me a Coffee
+        </h2>
+        <div class="donate-badges">
+          <a href="https://ko-fi.com/nvbangg" target="_blank" class="kofi-btn">
+            <img src="assets/icons/ko-fi.svg" alt="Ko-fi" />
+            <span>Support me on Ko-fi</span>
+          </a>
+          <a href="https://github.com/sponsors/nvbangg" target="_blank" class="sponsor-btn">
+            <ion-icon name="logo-github"></ion-icon>
+            <span>Sponsor on GitHub</span>
+          </a>
+          <a href="https://www.paypal.me/nvbangg" target="_blank" class="paypal-btn">
+            <ion-icon name="logo-paypal"></ion-icon>
+            <span>Donate via PayPal</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="donate-section bank-section">
+        <h2><ion-icon name="business-outline"></ion-icon>Bank Transfer</h2>
+        <div class="bank-info">
+          <div class="bank-details">
+            <div class="bank-item">
+              <ion-icon name="business-outline"></ion-icon>
+              <div>
+                <span class="label">Bank</span>
+                <span class="value">TECHCOMBANK</span>
+              </div>
+            </div>
+            <div class="bank-item">
+              <ion-icon name="card-outline"></ion-icon>
+              <div>
+                <span class="label">Account Number</span>
+                <span class="value">12335678999</span>
+              </div>
+            </div>
+            <div class="bank-item">
+              <ion-icon name="person-outline"></ion-icon>
+              <div>
+                <span class="label">Account Name</span>
+                <span class="value">NGUYEN VAN BANG</span>
+              </div>
+            </div>
+          </div>
+          <div class="bank-qr">
+            <img src="assets/images/techcombank-qr.jpg" alt="QR Code" />
+          </div>
+        </div>
+      </div>
+
+      <div class="donate-section">
+        <h2 class="donate-now-title">
+          <img src="assets/icons/ko-fi.svg" alt="Ko-fi" />
+          Donate Now
+        </h2>
+        <iframe id="kofiframe" src="https://ko-fi.com/nvbangg/?hidefeed=true&widget=true&embed=true&preview=true" style="
+              border: none;
+              width: 100%;
+              padding: 4px;
+              background: #f9f9f9;
+              border-radius: 20px;
+            " height="650" title="nvbangg"></iframe>
+      </div>
+    </article>
+  </main>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="./script.js"></script>
+</body>
+
+</html>

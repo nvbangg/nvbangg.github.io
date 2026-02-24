@@ -1,0 +1,383 @@
+:root {
+  --jet: hsl(0, 0%, 22%);
+  --dark: hsl(240, 2%, 12%);
+  --black: black;
+  --yellow: gold;
+  --white: white;
+  --gray: lightgray;
+  --font-family: "Poppins", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+button {
+  font: inherit;
+  border: none;
+  cursor: pointer;
+}
+ion-icon {
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+body {
+  background: var(--black);
+}
+
+main {
+  margin: 30px auto;
+  position: relative;
+  width: 95vw;
+  max-width: 1200px;
+  font: 500 16px/1.6 var(--font-family);
+}
+
+.page {
+  background: var(--dark);
+  border: 1px solid var(--jet);
+  border-radius: 20px;
+  padding: 30px;
+  display: none;
+  min-height: 400px;
+  color: var(--white);
+}
+.page.active {
+  display: block;
+}
+
+.page h1 {
+  font-size: 32px;
+  position: relative;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+}
+.page h1 ion-icon {
+  font-size: 36px;
+}
+.page h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(to right, hsl(45, 100%, 72%), hsl(35, 100%, 68%));
+  border-radius: 3px;
+}
+
+.page h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.page h2 ion-icon {
+  font-size: 28px;
+}
+
+#hi {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-size: 32px;
+}
+
+.contact-box {
+  margin: 10px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  display: inline-block;
+  text-align: center;
+}
+
+.contact-box ion-icon {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.contact-box a {
+  color: var(--yellow);
+  font-weight: 600;
+}
+
+.donate-section {
+  background: var(--jet);
+  border-radius: 20px;
+  padding: 30px;
+  margin-bottom: 25px;
+}
+
+.donate-badges {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.kofi-btn,
+.sponsor-btn,
+.paypal-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 24px;
+  border-radius: 20px;
+  transition: 0.2s;
+}
+
+.kofi-btn img,
+.sponsor-btn ion-icon,
+.paypal-btn ion-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.kofi-btn {
+  background: linear-gradient(135deg, #13c3ff 0%, #0077ff 100%);
+  color: var(--white);
+  box-shadow: 0 4px 15px rgba(0, 149, 255, 0.4);
+}
+
+.kofi-btn:hover {
+  transform: translateY(-2px);
+}
+
+.sponsor-btn {
+  background: linear-gradient(135deg, #ea4aaa 0%, #ff6b6b 100%);
+  color: var(--white);
+  box-shadow: 0 4px 15px rgba(234, 74, 170, 0.4);
+}
+
+.sponsor-btn:hover {
+  transform: translateY(-2px);
+}
+
+.paypal-btn {
+  background: linear-gradient(135deg, #ffcd59 0%, #ffa31a 100%);
+  color: #003087;
+  box-shadow: 0 4px 15px rgba(255, 196, 57, 0.4);
+}
+
+.paypal-btn:hover {
+  transform: translateY(-2px);
+}
+
+.bank-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.bank-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.bank-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 15px;
+  background: var(--dark);
+  border-radius: 15px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.bank-item ion-icon {
+  font-size: 32px;
+  color: var(--yellow);
+}
+
+.bank-item > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.bank-item .label {
+  font-size: 12px;
+  color: var(--gray);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.bank-item .value {
+  font-size: 16px;
+  color: var(--white);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.bank-qr {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.bank-qr img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 12px;
+}
+
+.donate-now-title {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.donate-now-title img {
+  width: 28px;
+  height: 28px;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: auto;
+  left: auto;
+  width: max-content;
+  background: hsla(240, 1%, 17%, 0.75);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--jet);
+  border-radius: 0 20px;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  gap: 30px;
+}
+
+.navbar button {
+  color: var(--gray);
+  padding: 20px 15px;
+  transition: 0.25s;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+}
+
+.navbar button::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 3px;
+  background: linear-gradient(to right, hsl(45, 100%, 72%), hsl(35, 100%, 68%));
+  border-radius: 3px;
+  transition: 0.25s;
+}
+
+.navbar button:hover {
+  color: var(--white);
+}
+
+.navbar button.active {
+  color: var(--yellow);
+}
+
+.navbar button.active::after {
+  width: calc(100% - 30px);
+}
+
+.navbar button ion-icon {
+  font-size: 20px;
+}
+
+body::-webkit-scrollbar {
+  width: 20px;
+}
+body::-webkit-scrollbar-track {
+  background: var(--black);
+}
+body::-webkit-scrollbar-thumb {
+  border: 5px solid var(--black);
+  background: hsla(0, 0%, 100%, 0.1);
+  border-radius: 20px;
+  box-shadow: inset 1px 1px 0 hsla(0, 0%, 100%, 0.11),
+    inset -1px -1px 0 hsla(0, 0%, 100%, 0.11);
+}
+body::-webkit-scrollbar-thumb:hover {
+  background: hsla(0, 0%, 100%, 0.15);
+}
+
+@media (max-width: 1000px) {
+  main {
+    margin: 15px auto 75px;
+  }
+
+  .page {
+    padding: 10px;
+  }
+
+  .page h1 {
+    font-size: 28px;
+  }
+
+  .page h1 ion-icon {
+    font-size: 32px;
+  }
+
+  .donate-section {
+    padding: 10px;
+  }
+
+  .bank-info {
+    grid-template-columns: 1fr;
+  }
+
+  .bank-qr {
+    justify-content: center;
+  }
+
+  .bank-qr img {
+    max-width: 400px;
+  }
+
+  .navbar {
+    position: fixed;
+    top: auto;
+    right: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 12px 12px 0 0;
+    padding: 0 5px;
+    gap: 2px;
+  }
+
+  .navbar button {
+    padding: 20px 10px;
+    font-size: 14px;
+    gap: 5px;
+  }
+
+  .navbar button ion-icon {
+    font-size: 18px;
+  }
+}
