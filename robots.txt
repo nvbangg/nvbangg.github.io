@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nvbangg.github.io/sitemap.xml
