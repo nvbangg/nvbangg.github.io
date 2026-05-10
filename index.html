@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,64 +7,126 @@
   <meta name="description" content="nvbangg's personal profile page" />
   <link rel="canonical" href="https://nvbangg.github.io/" />
 
-    <!-- Google tag (gtag.js) -->
+  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-D7CEW92GQS"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-D7CEW92GQS');
-  </script>
-
-  <link rel="stylesheet" href="./style.css" />
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-D7CEW92GQS');</script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{fontFamily:{poppins:['Poppins','sans-serif']},colors:{dark:'hsl(240,2%,12%)',jet:'hsl(0,0%,22%)'}}}}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet" />
+  <style>
+    body::-webkit-scrollbar{width:20px}
+    body::-webkit-scrollbar-track{background:#000}
+    body::-webkit-scrollbar-thumb{border:5px solid #000;background:hsla(0,0%,100%,.1);border-radius:20px;box-shadow:inset 1px 1px 0 hsla(0,0%,100%,.11),inset -1px -1px 0 hsla(0,0%,100%,.11)}
+    body::-webkit-scrollbar-thumb:hover{background:hsla(0,0%,100%,.15)}
+    ion-icon{vertical-align:middle;flex-shrink:0}
+    [data-page]{display:none}
+    [data-page].active{display:block}
+    [data-nav].active{color:gold}
+    .gold-bar::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:5px;background:linear-gradient(to right,hsl(45,100%,72%),hsl(35,100%,68%));border-radius:3px}
+    .nav-item{position:relative}
+    .nav-item::after{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:0;height:3px;background:linear-gradient(to right,hsl(45,100%,72%),hsl(35,100%,68%));border-radius:3px;transition:width .25s}
+    .nav-item:hover::after,.nav-item.active::after{width:calc(100% - 30px)}
+  </style>
 </head>
+<body class="bg-black font-poppins text-white">
 
-<body>
-  <main>
-    <nav class="navbar">
-      <button class="active" data-nav="about">
-        <ion-icon name="person-outline"></ion-icon>About
+  <main class="relative mx-auto my-8 mb-24 w-[95vw] max-w-5xl text-base font-medium leading-relaxed sm:mb-8">
+
+    <nav class="absolute top-0 right-0 z-10 flex w-max items-center gap-6 rounded-[0_20px] border border-jet bg-[hsla(240,1%,17%,.75)] px-5 backdrop-blur-[10px]
+                max-sm:fixed max-sm:inset-x-0 max-sm:bottom-0 max-sm:top-auto max-sm:w-full max-sm:justify-around max-sm:rounded-[12px_12px_0_0] max-sm:gap-0 max-sm:px-2">
+
+      <button data-nav="about" class="nav-item active flex flex-col items-center gap-1 bg-transparent px-2 py-3 text-gray-300 transition-colors hover:text-white
+                                       sm:flex-row sm:gap-2 sm:px-4 sm:py-5">
+        <ion-icon name="person-outline" class="text-xl"></ion-icon>
+        <span class="text-[11px] sm:text-base">About</span>
       </button>
-      <a class="nav-link" href="https://nvbangg.github.io/awesome-for-morphe/" target="_blank">
-        <ion-icon name="logo-github"></ion-icon>Awesome for Morphe
+
+      <a href="https://nvbangg.github.io/awesome-for-morphe/" target="_blank"
+        class="nav-item flex flex-col items-center gap-1 px-2 py-3 text-gray-300 no-underline font-medium transition-colors hover:text-white
+               sm:flex-row sm:gap-2 sm:px-4 sm:py-5 text-center">
+        <ion-icon name="logo-github" class="text-xl"></ion-icon>
+        <span class="text-[11px] sm:text-base leading-tight">Awesome <br class="sm:hidden" />for Morphe</span>
       </a>
-      <a class="nav-link" href="https://nvbangg.github.io/demo-sha/" target="_blank">
-        <ion-icon name="logo-github"></ion-icon>Demo Sha
+
+      <a href="https://nvbangg.github.io/demo-sha/" target="_blank"
+        class="nav-item flex flex-col items-center gap-1 px-2 py-3 text-gray-300 no-underline font-medium transition-colors hover:text-white
+               sm:flex-row sm:gap-2 sm:px-4 sm:py-5 text-center">
+        <ion-icon name="logo-github" class="text-xl"></ion-icon>
+        <span class="text-[11px] sm:text-base leading-tight">Demo <br class="sm:hidden" />Sha</span>
       </a>
     </nav>
-    <article class="page active" data-page="about">
-      <h1><ion-icon name="person-outline"></ion-icon>About Me</h1>
-      <br />
-      <h2 id="hi">👋 Hi there, I'm nvbangg</h2>
-      <div class="about-badges">
-        <div class="badge-row">
-          <a href="https://github.com/nvbangg" target="_blank" class="about-badge badge-github">
-            <span class="badge-left"><ion-icon name="logo-github"></ion-icon>GitHub</span>
-            <span class="badge-right">github.com/nvbangg</span>
+
+    <article data-page="about" class="min-h-[400px] rounded-[20px] border border-jet bg-dark p-8 text-white max-sm:p-4">
+
+      <h1 class="gold-bar relative mb-8 inline-flex items-center gap-4 pb-2 text-3xl max-sm:text-2xl max-sm:mb-6">
+        <ion-icon name="person-outline" class="text-4xl max-sm:text-3xl"></ion-icon>About Me
+      </h1>
+
+      <h2 id="hi" class="mb-6 text-center text-2xl font-semibold sm:text-3xl max-sm:text-xl max-sm:mb-4">
+        👋 Hi there, I'm nvbangg
+      </h2>
+
+      <div class="mt-6 flex flex-col items-center gap-4">
+        
+        <!-- Row 1: GitHub & Facebook -->
+        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center w-full">
+          
+          <a href="https://github.com/nvbangg" target="_blank"
+            class="inline-flex overflow-hidden rounded-full font-semibold text-white shadow-[0_3px_10px_rgba(99,120,150,.4)] transition-transform duration-300 hover:-translate-y-[2px]"
+            style="background:linear-gradient(135deg,#0d1117,#161b22)">
+            <span class="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 text-[13px] sm:text-[15px]">
+              <ion-icon name="logo-github" class="text-lg sm:text-xl"></ion-icon>GitHub
+            </span>
+            <span class="inline-flex items-center px-3 py-1.5 sm:px-4 sm:py-2 text-[13px] sm:text-[14px] tracking-[.2px] text-[#e6edf3]" style="background:#2d333b">
+              github.com/nvbangg
+            </span>
           </a>
-          <a href="https://facebook.com/nvbangg" target="_blank" class="about-badge badge-facebook">
-            <span class="badge-left"><ion-icon name="logo-facebook"></ion-icon>Facebook</span>
-            <span class="badge-right">facebook.com/nvbangg</span>
+
+          <a href="https://facebook.com/nvbangg" target="_blank"
+            class="inline-flex overflow-hidden rounded-full font-semibold text-white shadow-[0_3px_10px_rgba(24,119,242,.4)] transition-transform duration-300 hover:-translate-y-[2px]"
+            style="background:linear-gradient(135deg,#1877f2,#3b9bff)">
+            <span class="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 text-[13px] sm:text-[15px]">
+              <ion-icon name="logo-facebook" class="text-lg sm:text-xl"></ion-icon>Facebook
+            </span>
+            <span class="inline-flex items-center px-3 py-1.5 sm:px-4 sm:py-2 text-[13px] sm:text-[14px] tracking-[.2px] text-[#e6edf3]" style="background:#2d333b">
+              facebook.com/nvbangg
+            </span>
           </a>
+
         </div>
-        <div class="badge-row">
-          <a href="mailto:nvbangg@gmail.com" class="about-badge badge-email">
-            <span class="badge-left"><ion-icon name="mail-outline"></ion-icon>Email</span>
-            <span class="badge-right">nvbangg@gmail.com</span>
+
+        <!-- Row 2: Email & Sponsor -->
+        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center w-full">
+
+          <a href="mailto:nvbangg@gmail.com"
+            class="inline-flex overflow-hidden rounded-full font-semibold text-white shadow-[0_3px_10px_rgba(217,48,37,.4)] transition-transform duration-300 hover:-translate-y-[2px]"
+            style="background:linear-gradient(135deg,#d93025,#e06030)">
+            <span class="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 text-[13px] sm:text-[15px]">
+              <ion-icon name="mail-outline" class="text-lg sm:text-xl"></ion-icon>Email
+            </span>
+            <span class="inline-flex items-center px-3 py-1.5 sm:px-4 sm:py-2 text-[13px] sm:text-[14px] tracking-[.2px] text-[#e6edf3]" style="background:#2d333b">
+              nvbangg@gmail.com
+            </span>
           </a>
-          <a href="https://github.com/sponsors/nvbangg" target="_blank" class="about-badge badge-sponsor">
-            <span class="badge-left"><ion-icon name="heart-outline"></ion-icon>Sponsor</span>
+
+          <a href="https://github.com/sponsors/nvbangg" target="_blank"
+            class="inline-flex overflow-hidden rounded-full font-semibold text-white shadow-[0_3px_10px_rgba(191,57,137,.4)] transition-transform duration-300 hover:-translate-y-[2px]"
+            style="background:linear-gradient(135deg,#bf3989,#e05c9a)">
+            <span class="inline-flex items-center gap-2 px-6 py-1.5 sm:px-8 sm:py-2 text-[13px] sm:text-[15px]">
+              <ion-icon name="heart-outline" class="text-lg sm:text-xl"></ion-icon>Sponsor
+            </span>
           </a>
+
         </div>
+
       </div>
+    </article>
   </main>
+
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <script src="./script.js"></script>
 </body>
-
 </html>
