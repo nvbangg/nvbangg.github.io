@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,37 +8,111 @@
   <meta name="description" content="nvbangg's personal profile page" />
   <link rel="icon" type="image/svg+xml" href="https://github.githubassets.com/favicons/favicon.svg" />
   <link rel="canonical" href="https://nvbangg.github.io/" />
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D7CEW92GQS"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-D7CEW92GQS');</script>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config={theme:{extend:{fontFamily:{poppins:['Poppins','sans-serif']},colors:{dark:'hsl(240,2%,12%)',jet:'hsl(0,0%,22%)'}}}}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet" />
+
   <style>
-    body::-webkit-scrollbar{width:20px}
-    body::-webkit-scrollbar-track{background:#000}
-    body::-webkit-scrollbar-thumb{border:5px solid #000;background:hsla(0,0%,100%,.1);border-radius:20px;box-shadow:inset 1px 1px 0 hsla(0,0%,100%,.11),inset -1px -1px 0 hsla(0,0%,100%,.11)}
-    body::-webkit-scrollbar-thumb:hover{background:hsla(0,0%,100%,.15)}
-    ion-icon{vertical-align:middle;flex-shrink:0}
-    [data-page]{display:none}
-    [data-page].active{display:block}
-    [data-nav].active{color:gold}
-    @keyframes goldbar-expand{from{width:0}to{width:100%}}
-    .gold-bar::after{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:0;height:5px;background:linear-gradient(to right,hsl(45,100%,72%),hsl(35,100%,68%));border-radius:3px}
-    [data-page].active .gold-bar::after{animation:goldbar-expand .25s ease forwards}
-    .nav-item{position:relative}
-    .nav-item::after{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:0;height:3px;background:linear-gradient(to right,hsl(45,100%,72%),hsl(35,100%,68%));border-radius:3px;transition:width .25s}
-    .nav-item:hover::after,.nav-item.active::after{width:calc(100% - 30px)}
+    body::-webkit-scrollbar {
+      width: 20px
+    }
+
+    body::-webkit-scrollbar-track {
+      background: #000
+    }
+
+    body::-webkit-scrollbar-thumb {
+      border: 5px solid #000;
+      background: hsla(0, 0%, 100%, .1);
+      border-radius: 20px;
+      box-shadow: inset 1px 1px 0 hsla(0, 0%, 100%, .11), inset -1px -1px 0 hsla(0, 0%, 100%, .11)
+    }
+
+    body::-webkit-scrollbar-thumb:hover {
+      background: hsla(0, 0%, 100%, .15)
+    }
+
+    ion-icon {
+      vertical-align: middle;
+      flex-shrink: 0
+    }
+
+    [data-page] {
+      display: none
+    }
+
+    [data-page].active {
+      display: block
+    }
+
+    [data-nav].active {
+      color: gold
+    }
+
+    @keyframes goldbar-expand {
+      from {
+        width: 0
+      }
+
+      to {
+        width: 100%
+      }
+    }
+
+    .gold-bar::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 5px;
+      background: linear-gradient(to right, hsl(45, 100%, 72%), hsl(35, 100%, 68%));
+      border-radius: 3px
+    }
+
+    [data-page].active .gold-bar::after {
+      animation: goldbar-expand .25s ease forwards
+    }
+
+    .nav-item {
+      position: relative
+    }
+
+    .nav-item::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 3px;
+      background: linear-gradient(to right, hsl(45, 100%, 72%), hsl(35, 100%, 68%));
+      border-radius: 3px;
+      transition: width .25s
+    }
+
+    .nav-item:hover::after,
+    .nav-item.active::after {
+      width: calc(100% - 30px)
+    }
   </style>
+  
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D7CEW92GQS"></script>
+  <script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-D7CEW92GQS');</script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { theme: { extend: { fontFamily: { poppins: ['Poppins', 'sans-serif'] }, colors: { dark: 'hsl(240,2%,12%)', jet: 'hsl(0,0%,22%)' } } } }</script>
+
 </head>
+
 <body class="bg-black font-poppins text-white">
 
   <main class="relative mx-auto my-8 mb-24 w-[95vw] max-w-5xl text-base font-medium leading-relaxed sm:mb-8">
 
-    <nav class="absolute top-0 right-0 z-10 flex w-max items-center gap-6 rounded-[0_20px] border border-jet bg-[hsla(240,1%,17%,.75)] px-5 backdrop-blur-[10px]
+    <nav
+      class="absolute top-0 right-0 z-10 flex w-max items-center gap-6 rounded-[0_20px] border border-jet bg-[hsla(240,1%,17%,.75)] px-5 backdrop-blur-[10px]
                 max-sm:fixed max-sm:inset-x-0 max-sm:bottom-0 max-sm:top-auto max-sm:w-full max-sm:justify-around max-sm:rounded-[12px_12px_0_0] max-sm:gap-0 max-sm:px-2">
 
       <button data-nav="about" class="nav-item active flex flex-col items-center gap-1 bg-transparent px-2 py-3 text-gray-300 transition-colors hover:text-white
@@ -75,7 +150,9 @@
             <span class="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 text-[13px] sm:text-[15px]">
               <ion-icon name="logo-github" class="text-lg sm:text-xl"></ion-icon>GitHub
             </span>
-            <span class="inline-flex items-center px-3 py-1.5 sm:px-4 sm:py-2 text-[13px] sm:text-[14px] tracking-[.2px] text-[#e6edf3]" style="background:#2d333b">
+            <span
+              class="inline-flex items-center px-3 py-1.5 sm:px-4 sm:py-2 text-[13px] sm:text-[14px] tracking-[.2px] text-[#e6edf3]"
+              style="background:#2d333b">
               github.com/nvbangg
             </span>
           </a>
@@ -86,7 +163,9 @@
             <span class="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 text-[13px] sm:text-[15px]">
               <ion-icon name="logo-facebook" class="text-lg sm:text-xl"></ion-icon>Facebook
             </span>
-            <span class="inline-flex items-center px-3 py-1.5 sm:px-4 sm:py-2 text-[13px] sm:text-[14px] tracking-[.2px] text-[#e6edf3]" style="background:#2d333b">
+            <span
+              class="inline-flex items-center px-3 py-1.5 sm:px-4 sm:py-2 text-[13px] sm:text-[14px] tracking-[.2px] text-[#e6edf3]"
+              style="background:#2d333b">
               facebook.com/nvbangg
             </span>
           </a>
@@ -105,7 +184,8 @@
     </article>
 
     <!-- GitHub Pages -->
-    <article data-page="projects" class="min-h-[400px] rounded-[20px] border border-jet bg-dark p-8 text-white max-sm:p-4">
+    <article data-page="projects"
+      class="min-h-[400px] rounded-[20px] border border-jet bg-dark p-8 text-white max-sm:p-4">
 
       <h1 class="gold-bar relative mb-8 inline-flex items-center gap-4 pb-2 text-3xl max-sm:text-2xl max-sm:mb-6">
         <ion-icon name="logo-github" class="text-4xl max-sm:text-3xl"></ion-icon>GitHub Pages
@@ -121,19 +201,10 @@
             <span class="inline-flex items-center px-4 py-1.5 sm:px-5 sm:py-2 text-[13px] sm:text-[15px]">
               <ion-icon name="logo-github" class="text-lg sm:text-xl"></ion-icon>
             </span>
-            <span class="inline-flex items-center px-3 py-1.5 sm:px-4 sm:py-2 text-[13px] sm:text-[14px] tracking-[.2px] text-[#e6edf3]" style="background:#1877f2">
+            <span
+              class="inline-flex items-center px-3 py-1.5 sm:px-4 sm:py-2 text-[13px] sm:text-[14px] tracking-[.2px] text-[#e6edf3]"
+              style="background:#1877f2">
               Awesome for Morphe
-            </span>
-          </a>
-
-          <a href="https://ngbangg.github.io/builder-for-morphe/" target="_blank"
-            class="inline-flex overflow-hidden rounded-full font-semibold text-white shadow-[0_3px_10px_rgba(99,120,150,.4)] transition-transform duration-300 hover:-translate-y-[2px]"
-            style="background:linear-gradient(135deg,#0d1117,#161b22)">
-            <span class="inline-flex items-center px-4 py-1.5 sm:px-5 sm:py-2 text-[13px] sm:text-[15px]">
-              <ion-icon name="logo-github" class="text-lg sm:text-xl"></ion-icon>
-            </span>
-            <span class="inline-flex items-center px-3 py-1.5 sm:px-4 sm:py-2 text-[13px] sm:text-[14px] tracking-[.2px] text-[#e6edf3]" style="background:#1877f2">
-              Builder for Morphe
             </span>
           </a>
 
@@ -143,7 +214,9 @@
             <span class="inline-flex items-center px-4 py-1.5 sm:px-5 sm:py-2 text-[13px] sm:text-[15px]">
               <ion-icon name="logo-github" class="text-lg sm:text-xl"></ion-icon>
             </span>
-            <span class="inline-flex items-center px-3 py-1.5 sm:px-4 sm:py-2 text-[13px] sm:text-[14px] tracking-[.2px] text-[#e6edf3]" style="background:#1877f2">
+            <span
+              class="inline-flex items-center px-3 py-1.5 sm:px-4 sm:py-2 text-[13px] sm:text-[14px] tracking-[.2px] text-[#e6edf3]"
+              style="background:#1877f2">
               Demo SHA
             </span>
           </a>
@@ -154,7 +227,9 @@
             <span class="inline-flex items-center px-4 py-1.5 sm:px-5 sm:py-2 text-[13px] sm:text-[15px]">
               <ion-icon name="logo-github" class="text-lg sm:text-xl"></ion-icon>
             </span>
-            <span class="inline-flex items-center px-3 py-1.5 sm:px-4 sm:py-2 text-[13px] sm:text-[14px] tracking-[.2px] text-[#e6edf3]" style="background:#1877f2">
+            <span
+              class="inline-flex items-center px-3 py-1.5 sm:px-4 sm:py-2 text-[13px] sm:text-[14px] tracking-[.2px] text-[#e6edf3]"
+              style="background:#1877f2">
               A* Visualizer
             </span>
           </a>
@@ -164,21 +239,26 @@
 
         <!-- Microlink Screenshots -->
         <div class="mt-12 flex flex-col items-center gap-8 w-full">
-          
-          <a href="https://nvbangg.github.io/awesome-for-morphe/" target="_blank" class="block w-fit overflow-hidden rounded-[16px] border border-jet bg-[#0d1117] transition-transform duration-300 hover:-translate-y-[4px] hover:shadow-[0_8px_24px_rgba(24,119,242,0.2)]">
-            <img src="https://api.microlink.io/?url=https://nvbangg.github.io/awesome-for-morphe/&screenshot=true&embed=screenshot.url" alt="Awesome for Morphe Preview" class="max-w-full h-auto" loading="lazy" />
+
+          <a href="https://nvbangg.github.io/awesome-for-morphe/" target="_blank"
+            class="block w-fit overflow-hidden rounded-[16px] border border-jet bg-[#0d1117] transition-transform duration-300 hover:-translate-y-[4px] hover:shadow-[0_8px_24px_rgba(24,119,242,0.2)]">
+            <img
+              src="https://api.microlink.io/?url=https://nvbangg.github.io/awesome-for-morphe/&screenshot=true&embed=screenshot.url"
+              alt="Awesome for Morphe Preview" class="max-w-full h-auto" loading="lazy" />
           </a>
 
-          <a href="https://ngbangg.github.io/builder-for-morphe/" target="_blank" class="block w-fit overflow-hidden rounded-[16px] border border-jet bg-[#0d1117] transition-transform duration-300 hover:-translate-y-[4px] hover:shadow-[0_8px_24px_rgba(24,119,242,0.2)]">
-            <img src="https://api.microlink.io/?url=https://ngbangg.github.io/builder-for-morphe/&screenshot=true&embed=screenshot.url" alt="Builder for Morphe Preview" class="max-w-full h-auto" loading="lazy" />
+          <a href="https://nvbangg.github.io/demo-sha/" target="_blank"
+            class="block w-fit overflow-hidden rounded-[16px] border border-jet bg-[#0d1117] transition-transform duration-300 hover:-translate-y-[4px] hover:shadow-[0_8px_24px_rgba(24,119,242,0.2)]">
+            <img
+              src="https://api.microlink.io/?url=https://nvbangg.github.io/demo-sha/&screenshot=true&embed=screenshot.url"
+              alt="Demo SHA Preview" class="max-w-full h-auto" loading="lazy" />
           </a>
 
-          <a href="https://nvbangg.github.io/demo-sha/" target="_blank" class="block w-fit overflow-hidden rounded-[16px] border border-jet bg-[#0d1117] transition-transform duration-300 hover:-translate-y-[4px] hover:shadow-[0_8px_24px_rgba(24,119,242,0.2)]">
-            <img src="https://api.microlink.io/?url=https://nvbangg.github.io/demo-sha/&screenshot=true&embed=screenshot.url" alt="Demo SHA Preview" class="max-w-full h-auto" loading="lazy" />
-          </a>
-
-          <a href="https://nvbangg.github.io/astar-pathfinding-visualizer/" target="_blank" class="block w-fit overflow-hidden rounded-[16px] border border-jet bg-[#0d1117] transition-transform duration-300 hover:-translate-y-[4px] hover:shadow-[0_8px_24px_rgba(24,119,242,0.2)]">
-            <img src="https://api.microlink.io/?url=https://nvbangg.github.io/astar-pathfinding-visualizer/&screenshot=true&embed=screenshot.url" alt="A* Visualizer Preview" class="max-w-full h-auto" loading="lazy" />
+          <a href="https://nvbangg.github.io/astar-pathfinding-visualizer/" target="_blank"
+            class="block w-fit overflow-hidden rounded-[16px] border border-jet bg-[#0d1117] transition-transform duration-300 hover:-translate-y-[4px] hover:shadow-[0_8px_24px_rgba(24,119,242,0.2)]">
+            <img
+              src="https://api.microlink.io/?url=https://nvbangg.github.io/astar-pathfinding-visualizer/&screenshot=true&embed=screenshot.url"
+              alt="A* Visualizer Preview" class="max-w-full h-auto" loading="lazy" />
           </a>
 
 
@@ -193,4 +273,5 @@
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <script src="./script.js"></script>
 </body>
+
 </html>
